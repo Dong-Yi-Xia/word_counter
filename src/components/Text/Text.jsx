@@ -16,13 +16,19 @@ function Text() {
         setShow(false)
     }
 
+    const handleTextChange = (e) => {
+        setWords(e.target.value)
+        handleCount()
+    }
+
     const handleCharacterCount = () => {
         return words.length
     }
 
     const handleWordCount = () => {
-        let wordArray = words.split(/\s+/)
+        let wordArray = words.split(/\s+/g)
         // \s+ - one or more whitespace 
+
         if (wordArray[wordArray.length-1] === "") wordArray.pop()
         return wordArray.length
     }
@@ -33,6 +39,7 @@ function Text() {
         // \w - Word character
         // \[.?!] - Punctuation as specified.
         // (\s|$) - Whitespace character OR the end of the string.
+        // g - to perform a global match
 
         if(matchArray !== null){
            return matchArray.length
@@ -40,27 +47,38 @@ function Text() {
         return 0
     }
 
+    const handleParagraphCount = () => {
+        let lineArray = words.split(/\n+/g)
+        // \n+ - one or more newline
+
+        if (lineArray[lineArray.length-1] === "") lineArray.pop()
+        return lineArray.length
+    }
+
     const handleCount = (e) => {
         const counter = {
             characterCount: handleCharacterCount(),
-            wordCount: handleWordCount()
+            wordCount: handleWordCount(),
+            sentenceCount: handleSentenceCount(),
+            paragraphCount: handleParagraphCount()
         }
 
         setCount(counter)
         setShow(true)
     }
 
-    console.log(handleSentenceCount())
+    console.log(handleParagraphCount())
     return (
         <div className='text-container'>
             <textarea 
                 className='word-field' 
                 placeholder='Enter Text Here'
-                onChange={e => setWords(e.target.value)}
+                onChange={handleTextChange}
                 value={words}
             ></textarea>
             <button onClick={handleClear}>Clear</button>
             <button onClick={handleCount}>Count</button>
+      
             {show ? <Result count={count}/> : ""}
         </div>
     )
