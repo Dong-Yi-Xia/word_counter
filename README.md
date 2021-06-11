@@ -7,3 +7,5 @@
 5. Bigrams (counts of unique pairs of words)
 
 ![alt text](src/assets/images/count.png)
+
+# SetUp

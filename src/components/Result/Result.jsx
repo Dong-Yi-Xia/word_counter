@@ -1,8 +1,9 @@
 import React from 'react'
+import './Result.scss'
 
 function Result() {
     return (
-        <div>
+        <div className='result-container'>
             This is the Result
         </div>
     )

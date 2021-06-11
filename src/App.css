@@ -3,7 +3,6 @@
   margin: 0;
 }
 
-.text{
-  border: 1px solid black;
-  margin: 0 auto;
+body{
+  min-height: 100vh;
 }
