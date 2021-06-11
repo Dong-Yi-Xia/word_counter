@@ -1,4 +1,10 @@
 .result-container{
     border: 1px solid red;
     margin: 20px 0;
+    
+    ul{
+        list-style-type:none;
+        // border: 1px solid;
+        padding: 0;
+    }
 }
