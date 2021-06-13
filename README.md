@@ -9,3 +9,6 @@
 ![alt text](src/assets/images/count.png)
 
 # SetUp
+
+
+https://www.npmjs.com/package/speak-tts

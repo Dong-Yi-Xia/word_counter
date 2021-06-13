@@ -1,6 +1,8 @@
 import React,{useEffect, useState} from 'react'
 import './Text.scss'
 import Result from '../Result/Result'
+import Speech from 'speak-tts' 
+
 
 function Text() {
 
@@ -88,6 +90,28 @@ function Text() {
         setCount(counter)
     }
 
+    
+    const speak = () => {
+        const speech = new Speech();
+            speech.init({
+                volume: 0.5,
+                lang: "en-GB",
+                rate: 1,
+                pitch: 1,
+                voice:'Google UK English Female',
+                splitSentences: true,
+                listeners: {
+                    onvoiceschanged: voices => {
+                    console.log("Voices changed", voices);
+                    }
+                }
+            }).then(data => {
+                speech.speak({
+                        text: words ? words : "PLease enter a text"
+                    })
+            })
+    }
+
 
     // console.log(handleUnqieNGramCount(words, 2))
     return (
@@ -99,6 +123,7 @@ function Text() {
                 value={words}
             ></textarea>
             <button onClick={handleClear}>Clear</button>
+            <button onClick={speak}>Listen</button>
       
             <Result count={count}/> 
         </div>
