@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import './Text.scss'
 import Result from '../Result/Result'
 
@@ -6,19 +6,20 @@ function Text() {
 
     const [words, setWords] = useState('')
     const [count, setCount] = useState({})
-    const [show, setShow] = useState(false)
 
 
     console.log(words)
+
+    useEffect(() => {
+        handleCount()
+    }, [words])
     
     const handleClear = () => {
         setWords('')
-        setShow(false)
     }
 
     const handleTextChange = (e) => {
         setWords(e.target.value)
-        handleCount()
     }
 
     const handleCharacterCount = () => {
@@ -55,7 +56,6 @@ function Text() {
         return lineArray.length
     }
 
-
     const handleUnqieNGramCount = (words, n) => {
         words = words.replace((/[^a-zA-Z0-9\s]/g), '').toLowerCase().split(" ")
         let map = {}
@@ -63,7 +63,7 @@ function Text() {
           let key = words.slice(i, i+n)
           map[key] ? map[key]++ : map[key] = 1
         }
-        console.log(map)
+
         let count = 0
         for(let key in map){
           if(map[key] === 1) count++
@@ -79,12 +79,10 @@ function Text() {
             paragraphCount: handleParagraphCount(),
             bigramsUnqiueCount: handleUnqieNGramCount(words, 2)
         }
-
         setCount(counter)
-        setShow(true)
     }
 
-    console.log(handleUnqieNGramCount(words, 2))
+    // console.log(handleUnqieNGramCount(words, 2))
     return (
         <div className='text-container'>
             <textarea 
@@ -94,9 +92,8 @@ function Text() {
                 value={words}
             ></textarea>
             <button onClick={handleClear}>Clear</button>
-            <button onClick={handleCount}>Count</button>
       
-            {show ? <Result count={count}/> : ""}
+            <Result count={count}/> 
         </div>
     )
 }

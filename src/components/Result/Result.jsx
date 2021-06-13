@@ -3,7 +3,6 @@ import './Result.scss'
 
 function Result({count}) {
 
-    console.log(count.characterCount)
     return (
         <div className='result-container'>
             <ul>
