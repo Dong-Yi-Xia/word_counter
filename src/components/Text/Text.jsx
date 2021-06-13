@@ -55,19 +55,36 @@ function Text() {
         return lineArray.length
     }
 
+
+    const handleUnqieNGramCount = (words, n) => {
+        words = words.replace((/[^a-zA-Z0-9\s]/g), '').toLowerCase().split(" ")
+        let map = {}
+        for(let i=0; i<=words.length-n; i++){
+          let key = words.slice(i, i+n)
+          map[key] ? map[key]++ : map[key] = 1
+        }
+        console.log(map)
+        let count = 0
+        for(let key in map){
+          if(map[key] === 1) count++
+        }
+        return count
+    }
+
     const handleCount = (e) => {
         const counter = {
             characterCount: handleCharacterCount(),
             wordCount: handleWordCount(),
             sentenceCount: handleSentenceCount(),
-            paragraphCount: handleParagraphCount()
+            paragraphCount: handleParagraphCount(),
+            bigramsUnqiueCount: handleUnqieNGramCount(words, 2)
         }
 
         setCount(counter)
         setShow(true)
     }
 
-    console.log(handleParagraphCount())
+    console.log(handleUnqieNGramCount(words, 2))
     return (
         <div className='text-container'>
             <textarea 

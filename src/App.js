@@ -14,8 +14,6 @@ function App() {
       <Container>
         <Row> <Col> <Header/> </Col> </Row>
         <Row> <Col> <Text/> </Col> </Row>
-  
-
       </Container>
 
     </div>

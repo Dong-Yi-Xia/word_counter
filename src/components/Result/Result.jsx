@@ -11,6 +11,7 @@ function Result({count}) {
                 <li>Word Count: {count.wordCount}</li>
                 <li>Sentence Count: {count.sentenceCount}</li>
                 <li>Paragraph Count: {count.paragraphCount}</li>
+                <li>Bigrams Unique Count: {count.bigramsUnqiueCount}</li>
             </ul>
            
         </div>
