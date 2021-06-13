@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/word_counter/static/css/main.1eafdad6.chunk.css",
+    "main.js": "/word_counter/static/js/main.d4b1f51d.chunk.js",
+    "main.js.map": "/word_counter/static/js/main.d4b1f51d.chunk.js.map",
+    "runtime-main.js": "/word_counter/static/js/runtime-main.e6959d94.js",
+    "runtime-main.js.map": "/word_counter/static/js/runtime-main.e6959d94.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/word_counter/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.3c786610.chunk.js": "/word_counter/static/js/2.3c786610.chunk.js",
+    "static/js/2.3c786610.chunk.js.map": "/word_counter/static/js/2.3c786610.chunk.js.map",
+    "index.html": "/word_counter/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/word_counter/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.1eafdad6.chunk.css.map": "/word_counter/static/css/main.1eafdad6.chunk.css.map",
+    "static/js/2.3c786610.chunk.js.LICENSE.txt": "/word_counter/static/js/2.3c786610.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e6959d94.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.3c786610.chunk.js",
+    "static/css/main.1eafdad6.chunk.css",
+    "static/js/main.d4b1f51d.chunk.js"
+  ]
+}
