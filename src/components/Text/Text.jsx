@@ -8,23 +8,25 @@ function Text() {
     const [count, setCount] = useState({})
 
 
-    console.log(words)
-
     useEffect(() => {
         handleCount()
     }, [words])
-    
+ 
+
     const handleClear = () => {
         setWords('')
     }
+
 
     const handleTextChange = (e) => {
         setWords(e.target.value)
     }
 
+
     const handleCharacterCount = () => {
         return words.length
     }
+
 
     const handleWordCount = () => {
         let wordArray = words.split(/\s+/g)
@@ -33,6 +35,7 @@ function Text() {
         if (wordArray[wordArray.length-1] === "") wordArray.pop()
         return wordArray.length
     }
+
 
     const handleSentenceCount = () => {
         let matchArray
@@ -48,6 +51,7 @@ function Text() {
         return 0
     }
 
+
     const handleParagraphCount = () => {
         let lineArray = words.split(/\n+/g)
         // \n+ - one or more newline
@@ -55,6 +59,7 @@ function Text() {
         if (lineArray[lineArray.length-1] === "") lineArray.pop()
         return lineArray.length
     }
+
 
     const handleUnqieNGramCount = (words, n) => {
         words = words.replace((/[^a-zA-Z0-9\s]/g), '').toLowerCase().split(" ")
@@ -71,6 +76,7 @@ function Text() {
         return count
     }
 
+
     const handleCount = (e) => {
         const counter = {
             characterCount: handleCharacterCount(),
@@ -81,6 +87,7 @@ function Text() {
         }
         setCount(counter)
     }
+
 
     // console.log(handleUnqieNGramCount(words, 2))
     return (
