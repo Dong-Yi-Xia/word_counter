@@ -128,8 +128,6 @@ function Text() {
             <button onClick={speechTTS}>Listen</button>
       
             <Result count={count}/> 
-
-
         </div>
     )
 }

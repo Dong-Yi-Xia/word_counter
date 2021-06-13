@@ -1,4 +1,5 @@
 # Word Counter App
+https://dong-yi-xia.github.io/word_counter/
 
 1. Character Count
 2. Word Count
@@ -24,18 +25,15 @@ TTS
 
 
 
-## Extra Way with the Voice RSS API
+## Extra Way using the Voice RSS API
 - http://www.voicerss.org/api/
 - https://www.w3schools.com/tags/ref_av_dom.asp
 
 
-Another way on using TTS with the 
+Another way on using TTS is with the new Audio. Replace key=APIKEY and src=TEXT
 ```
-<audio className="music">
-    <source src="http://api.voicerss.org/?key=1234567890QWERTY&hl=en-us&src=Hello, world!"></source>
-</audio>
 <button onClick={(e)=>{
-        const music = document.querySelector('.music')
+        let music = new Audio('http://api.voicerss.org/?key=123456789&hl=en-us&src=Hello, world!')
         music.play()
     }}>
 Listen</button>
