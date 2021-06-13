@@ -91,7 +91,7 @@ function Text() {
     }
 
     
-    const speak = () => {
+    const speechTTS = () => {
         const speech = new Speech();
             speech.init({
                 volume: 0.5,
@@ -113,6 +113,8 @@ function Text() {
     }
 
 
+
+
     // console.log(handleUnqieNGramCount(words, 2))
     return (
         <div className='text-container'>
@@ -123,9 +125,11 @@ function Text() {
                 value={words}
             ></textarea>
             <button onClick={handleClear}>Clear</button>
-            <button onClick={speak}>Listen</button>
+            <button onClick={speechTTS}>Listen</button>
       
             <Result count={count}/> 
+
+
         </div>
     )
 }
