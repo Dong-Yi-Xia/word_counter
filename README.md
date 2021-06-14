@@ -7,7 +7,7 @@ https://dong-yi-xia.github.io/word_counter/
 4. Paragraph Count
 5. Bigrams (counts of unique pairs of words)
 
-![alt text](src/assets/images/count.png)
+![alt text](src/assets/count.png)
 
 # SetUp
 

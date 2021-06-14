@@ -3,6 +3,7 @@ import './Text.scss'
 import Result from '../Result/Result'
 import Speech from 'speak-tts' 
 import Button from 'react-bootstrap/Button'
+import typing from '../../assets/typewritter.wav'
 
 
 function Text() {
@@ -22,6 +23,7 @@ function Text() {
 
 
     const handleTextChange = (e) => {
+        new Audio(typing).play()
         setWords(e.target.value)
     }
 
