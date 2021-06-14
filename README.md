@@ -1,6 +1,7 @@
 # Word Counter App
 https://dong-yi-xia.github.io/word_counter/
 
+# 2.Word Count Challenge
 1. Character Count
 2. Word Count
 3. Sentence Count
@@ -10,8 +11,11 @@ https://dong-yi-xia.github.io/word_counter/
 ![alt text](src/assets/images/count.png)
 
 # SetUp
-
-
+1. git clone the word_counter repo onto your local drive.
+2. cd into the word_counter 
+3. run --> npm install
+4. run --> npm start
+5. Happy Counting!!
 
 # Dependencies
 BootStrap
