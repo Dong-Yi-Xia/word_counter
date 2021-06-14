@@ -11,8 +11,8 @@ function App() {
   return (
     <div className="App">
 
-      <Container>
-        <Row> <Col> <Header/> </Col> </Row>
+    <Header />
+      <Container>     
         <Row> <Col> <Text/> </Col> </Row>
       </Container>
 

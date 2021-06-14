@@ -4,7 +4,11 @@ import './Header.scss'
 function Header() {
     return (
         <div className='header-container'>
-            This is the Header
+            <div className='animation-container'>
+                <div className='zero'>0</div>
+                <div className='one'>1</div>
+            </div>
+            <h1 className='title'> Word Counter </h1>
         </div>
     )
 }

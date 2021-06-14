@@ -5,7 +5,7 @@ function Result({count}) {
 
     return (
         <div className='result-container'>
-            <ul>
+            <ul class='countList'>
                 <li>Character Count: {count.characterCount}</li>
                 <li>Word Count: {count.wordCount}</li>
                 <li>Sentence Count: {count.sentenceCount}</li>
