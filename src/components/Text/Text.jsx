@@ -2,6 +2,7 @@ import React,{useEffect, useState} from 'react'
 import './Text.scss'
 import Result from '../Result/Result'
 import Speech from 'speak-tts' 
+import Button from 'react-bootstrap/Button'
 
 
 function Text() {
@@ -124,8 +125,10 @@ function Text() {
                 onChange={handleTextChange}
                 value={words}
             ></textarea>
-            <button onClick={handleClear}>Clear</button>
-            <button onClick={speechTTS}>Listen</button>
+            <div className='buttonOption'>
+                <Button variant="warning" onClick={handleClear}>Clear</Button>
+                <Button variant="success" onClick={speechTTS}>Listen</Button>
+            </div>
       
             <Result count={count}/> 
         </div>
