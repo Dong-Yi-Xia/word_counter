@@ -11,7 +11,16 @@
    
    .buttonOption{
        display: flex;
-       justify-content: space-around;;
+       justify-content: space-around;
+
+        button{
+           font-size: 1.1rem;
+
+           &:active{
+            transform: translateY(5px); 
+           }
+       }
+
    }
    
 }
