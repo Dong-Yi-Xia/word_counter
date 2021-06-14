@@ -7,7 +7,7 @@ https://dong-yi-xia.github.io/word_counter/
 4. Paragraph Count
 5. Bigrams (counts of unique pairs of words)
 
-![alt text](src/assets/count.png)
+![alt text](src/assets/images/count.png)
 
 # SetUp
 
@@ -23,6 +23,9 @@ Scss
 TTS
 - https://www.npmjs.com/package/speak-tts
 
+
+# Resources 
+- https://mixkit.co/free-sound-effects/typewriter/
 
 
 ## Extra Way using the Voice RSS API

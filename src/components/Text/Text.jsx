@@ -3,7 +3,8 @@ import './Text.scss'
 import Result from '../Result/Result'
 import Speech from 'speak-tts' 
 import Button from 'react-bootstrap/Button'
-import typing from '../../assets/typewritter.wav'
+import TypeSingle from '../../assets/sounds/single.wav'
+import TypeReturn from '../../assets/sounds/return.wav'
 
 
 function Text() {
@@ -22,8 +23,16 @@ function Text() {
     }
 
 
+    const handleKeyDown = (e) =>{
+        if(e.key === 'Enter'){
+            new Audio(TypeReturn).play()
+        }else{
+            new Audio(TypeSingle).play()
+        }
+    }
+
+
     const handleTextChange = (e) => {
-        new Audio(typing).play()
         setWords(e.target.value)
     }
 
@@ -105,7 +114,7 @@ function Text() {
                 splitSentences: true,
                 listeners: {
                     onvoiceschanged: voices => {
-                    console.log("Voices changed", voices);
+                    // console.log("Voices changed", voices);
                     }
                 }
             }).then(data => {
@@ -120,12 +129,13 @@ function Text() {
 
     // console.log(handleUnqieNGramCount(words, 2))
     return (
-        <div className='text-container'>
+        <div className='text-container'> 
             <textarea 
                 className='word-field' 
                 placeholder='Enter Text Here'
                 onChange={handleTextChange}
                 value={words}
+                onKeyDown={handleKeyDown}
             ></textarea>
             <div className='buttonOption'>
                 <Button variant="warning" onClick={handleClear}>Clear</Button>
