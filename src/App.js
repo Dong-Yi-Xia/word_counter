@@ -10,12 +10,10 @@ import {Container, Row, Col} from 'react-bootstrap'
 function App() {
   return (
     <div className="App">
-
-    <Header />
+      <Header />
       <Container>     
         <Row> <Col> <Text/> </Col> </Row>
       </Container>
-
     </div>
   );
 }

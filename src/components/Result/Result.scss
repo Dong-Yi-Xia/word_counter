@@ -1,12 +1,17 @@
 .result-container{
-    // border: 1px solid red;
+    width: 100%;
     margin: 5% auto;
-    box-shadow: 1px 4px 30px 2px rgba(100, 182, 100, 0.842);
-    border-radius: 20px 20px 50px 50px;
+    padding: 1px;
+    background-color:  rgba(100, 182, 100, 0.842);
     
     .countList{
+        width: 70%;
         list-style-type:none;
-        padding: 0;
+        padding: 5px 0px;
         text-align: center;
+        margin: 5px auto;
+        border-radius: 20px 0px 20px 0px;
+        box-shadow: 1px 2px 10px 1px rgba(255, 255, 255, 0.897);
+        background-color: honeydew;
     }
 }
